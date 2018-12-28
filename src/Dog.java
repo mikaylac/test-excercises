@@ -1,13 +1,15 @@
 public class Dog implements Canine{
 
     private boolean seesMailman;
+    private String barkString = "The dog is barking.";
+    private String ignoreString = "The dog is not barking.";
 
     @Override
     public String bark() {
         if(seesMailman){
-            return "The dog is barking.";
+            return barkString;
         }
-        return "The dog sits quietly.";
+        return ignoreString;
     }
 
     @Override

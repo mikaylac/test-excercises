@@ -1,7 +1,7 @@
 public interface Canine {
 
-    String bark();
+    public String bark();
 
-    String eat();
+    public String eat();
 
 }

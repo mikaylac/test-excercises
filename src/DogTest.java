@@ -6,20 +6,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class DogTest {
 
     @Test
-    public void shouldBark_WhenSeesMailmanIsTrue(){
+    public void shouldReturnBarkStringWhenSeesMailmanIsTrue(){
         Dog dog = new Dog();
         dog.setSeesMailman(true);
-        String expectedString = "The dog is barking.";
-        assertThat(dog.bark(), is(expectedString));
+        String expectedBarkString = "The dog is barking.";
+        assertThat(dog.bark(), is(expectedBarkString));
     }
 
     @Test
-    public void shouldNotBark_WhenSeesMailmanIsFalse(){
+    public void shouldReturnIgnoreStringWhenSeesMailmanIsFalse(){
         Dog dog = new Dog();
         dog.setSeesMailman(false);
-        String expectedIgnoreString = "The dog sits quietly.";
+        String expectedIgnoreString = "The dog is not barking.";
         assertThat(dog.bark(), is(expectedIgnoreString));
     }
-
-
 }
