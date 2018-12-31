@@ -1,19 +1,18 @@
 public enum InsertedCoin {
 
-    PENNY(2.5, 19.05, .01),
-    PIECE_OF_METAL(4.3, 20.01, .00),
-    NICKEL(5.00, 21.21, .05),
-    DIME(2.27, 17.91, .10),
-    QUARTER(5.67, 24.26, .25);
+    PENNY(2.5, 19.05),
+    PIECE_OF_METAL(4.3, 20.01),
+    NICKEL(5.00, 21.21),
+    DIME(2.27, 17.91),
+    QUARTER(5.67, 24.26);
 
     private double weightInGrams;
     private double diameterInMillimeters;
     private double valueInCents;
 
-    private InsertedCoin(double weightInGrams, double diameterInMillimeters, double valueInCents){
+    private InsertedCoin(double weightInGrams, double diameterInMillimeters){
         this.weightInGrams = weightInGrams;
         this.diameterInMillimeters = diameterInMillimeters;
-        this.valueInCents = valueInCents;
     }
 
     public double getWeightInGrams(){
@@ -24,7 +23,4 @@ public enum InsertedCoin {
         return this.diameterInMillimeters;
     }
 
-    public double getValueInCents(){
-        return this.valueInCents;
-    }
 }
