@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -91,4 +92,35 @@ public class ThingTest {
         assertThat(thing.mapPlayersToJerseys(players, jerseyNumbers), is(expectedMap));
     }
 
+    //Given an int array length 2, return true if it contains a 2 or a 3.
+    @Test
+    public void shouldReturnTrueIfContainsTwoOrThree(){
+        Thing thing = new Thing();
+        assertThat(thing.containsTwoOrThree(new int[]{1,2}), is(true));
+    }
+
+    //Given an int array of any length,
+    // return a new array of its first 2 elements.
+    // If the array is smaller than length 2, use whatever elements are present
+    @Test
+    public void shouldReturnFirstTwoElementsIfPossible(){
+        Thing thing = new Thing();
+        int[] result = thing.returnFirstTwo(new int[]{4, 6, 7, 2, 2});
+        assertThat(result, is(new int[]{4,6}));
+
+        result = thing.returnFirstTwo(new int[]{4,2});
+        assertThat(result, is(new int[]{4,2}));
+    }
+
+    //Given 2 int arrays, each length 2, return a new array length 4 containing all their elements
+    @Test
+    public void shouldCombineArrays(){
+        Thing thing = new Thing();
+        int[] expectedArr = new int[]{2,3,4,5};
+        int[] arr1 = new int[]{2,3};
+        int[] arr2 = new int[]{4,5};
+        assertThat(thing.combineArrays(arr1, arr2), is(expectedArr));
+
+
+    }
 }
