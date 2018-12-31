@@ -1,4 +1,4 @@
-public enum Coin {
+public enum ValidCoin {
 
     NICKEL(5.00, 21.21, .05),
     DIME(2.27, 17.91, .10),
@@ -9,7 +9,7 @@ public enum Coin {
     private double diameterInMillimeters;
     private double valueInCents;
 
-    private Coin(double weightInGrams, double diameterInMillimeters, double valueInCents){
+    private ValidCoin(double weightInGrams, double diameterInMillimeters, double valueInCents){
         this.weightInGrams = weightInGrams;
         this.diameterInMillimeters = diameterInMillimeters;
         this.valueInCents = valueInCents;
