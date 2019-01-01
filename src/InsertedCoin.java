@@ -1,7 +1,7 @@
 public enum InsertedCoin {
 
     PENNY(2.5, 19.05),
-    PIECE_OF_METAL(4.3, 20.01),
+    SLUG(4.3, 20.01),
     NICKEL(5.00, 21.21),
     DIME(2.27, 17.91),
     QUARTER(5.67, 24.26);
